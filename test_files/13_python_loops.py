@@ -59,11 +59,10 @@ tuple_ = ("Python", "Loops", "Sequence", "Condition", "Range")
 for iterator in range(len(tuple_)):
     print(tuple_[iterator].upper())
 
-
 # Python program to show how to use a while loop
 counter = 0
 # Initiating the loop
-while counter < 10: # giving the condition
+while counter < 10:  # giving the condition
     counter = counter + 3
     print("Python Loops")
 
@@ -94,8 +93,51 @@ for string in "Python Loops":
         break
     print('Current Letter: ', string)
 
-
 # Python program to show how the pass statement works
 for string in "Python Loops":
     pass
 print('Last Letter: ', string)
+
+# range function
+my_list = [3, 5, 7, 9]
+print(f'Original List: {my_list}')
+for iter_var in range(len(my_list)):
+    my_list.append(my_list[iter_var] + 2)
+
+print(f'List after executing the for loop: {my_list}')
+
+# creating the list of numbers
+number = [3, 5, 23, 6, 5, 1, 2, 9, 8]
+
+# initilizing a variable that will store the sum
+sum_ = 0
+
+# using for loop to iterate over the list
+for num in number:
+    sum_ = sum_ + num ** 2
+
+print(f'Number list: {number}')
+print(f'The sum of square is: {sum_}')
+
+# iterating by using index of sequence
+
+# using else statement in for loop
+# code to print marks of a student from the record
+student_name_1 = 'Itika'
+student_name_2 = 'Parker'
+
+# creating a dictionary of students records
+records = {'Itika': 90, 'Arshia': 92, 'Peter': 98}
+
+
+def get_record(student_name):
+    for a_student in records:  # for loop will iterate over the keys of the dictionary
+        if a_student == student_name:
+            return records[a_student]
+            break
+        else:
+            return f'There is no record found for {student_name} in the records'
+
+
+print(f'Marks of {student_name_1} are: {get_record(student_name_1)}')
+print(f'Marks of {student_name_2} are: {get_record(student_name_2)}')
